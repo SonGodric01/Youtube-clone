@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Position Practices</title>
+    </head>
+    <body style="
+    height:3000px;
+    padding-top: 50px;
+    padding-left: 70px;
+    ">
+        <div style="
+        background-color:black;
+        color:white;
+        position: fixed;
+        /* we can stretch the element by using 4 properties top left bottom and right */
+        top: 0px;
+        left: 0;
+        right: 0;
+        height: 50px;
+        z-index: 1;
+        ">header</div>
+
+        <div style="
+        background-color: green;
+        color: white;
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        top: 50px;
+        width: 70px;
+        ">
+            sidebar
+        </div>
+
+        <div style="
+        position:absolute;
+        /* position absolute is placed on the page, the position fixed is placed on browser window */
+        background-color:red;
+        color: white;
+        right: 10px;
+        top: 55px;
+        /* this element was written below the header so this appear when we scroll up */
+        z-index: 0;
+        /* by default the bigger z-index will appear in front */
+        ">
+            absolute
+        </div>
+
+        <div style="
+        background-color: lightblue;
+        height: 200px;
+        width: 200px;
+        position: static;
+        /* the default position */
+        ">div 1</div>
+        <div style="
+        background-color: lightpink;
+        height: 200px;
+        width: 200px;
+        position: relative;
+        /* when the element absolute inside the element relative, it will be positioned inside the element */
+        ">
+        div 2
+        <div style="
+        position:absolute;
+        /* position absolute is placed on the page, the position fixed is placed on browser window */
+        background-color:black;
+        color: white;
+        right: 10px;
+        /* this element was written below the header so this appear when we scroll up */
+        z-index: 0;
+        /* by default the bigger z-index will appear in front */
+        bottom: 10px;
+        ">
+            5:00
+        </div>
+        </div>
+    </body>
+</html>
